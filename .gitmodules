@@ -1,0 +1,6 @@
+[submodule "js/appdotnet"]
+	path = js/appdotnet
+	url = git://github.com/damienklinnert/appdotnet.git
+[submodule "js/jquery"]
+	path = js/jquery
+	url = git://github.com/jquery/jquery.git

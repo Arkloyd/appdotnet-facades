@@ -1,0 +1,60 @@
+/* Variables.scss
+ * Adapted partially from Twitter Bootstrap.
+ */
+
+// Global Values
+// =============
+
+// Shades
+$black: #111;
+$darkerGray: #222;
+$darkGray: #333;
+$gray: #555;
+$lightGray: #999;
+$lighterGray: #ddd;
+$white: #fff;
+
+// Colour palette from Solarized.
+// TODO: credit Solarized properly
+$blue: #268bd2;
+$green: #859900;
+$red: #dc322f;
+$yellow: #b58900;
+$orange: #cb4b16;
+$pink: #d33682;
+$purple: #6c71c4;
+
+// Page Basics
+// - see also: basics.scss
+$bodyBackground: $white;
+$textColor: $darkGray;
+$linkColor: $purple;
+$linkColorHover: $pink;
+
+// Typography
+// - see also: typography.scss
+$sansFontFamily: "Helvetica Neue", Helvetica, Arial, sans-serif;
+$serifFontFamily: Georgia, "Times New Roman", Times, serif;
+$monoFontFamily: Menlo, Monaco, Consolas, "Courier New", monospace;
+
+$baseFontSize: 13px;
+$baseLineHeight: 18px;
+$baseFontFamily: $sansFontFamily;
+$altFontFamily: $serifFontFamily;
+
+$headingsFontFamily: inherit; // Make your own font family and stick it here!
+$headingsFontWeight: bold;
+$headingsColor: inherit;
+
+// Forms
+// - see also: forms.scss
+$buttonBackground: $white;
+$buttonBackgroundHighlight: $lighterGray;
+$buttonBorder: #ccc;
+
+$inputBackground: $white;
+$inputBorder: #ccc;
+$inputBorderRadius: 3px;
+$inputDisabledBackground: $lighterGray;
+$formActionsBackground: #f5f5f5;
+

@@ -1,0 +1,99 @@
+/* Reset.scss
+ * Adapted from Normalize.css and Twitter Bootstrap's reset
+ */
+
+// HTML5 Elements.
+// Make sure these display as 'block' in everything.
+article, aside, details, figcaption, figure, footer, header, hgroup, nav,
+section {
+  display: block;
+}
+
+audio, canvas, video {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+}
+
+// Prevents modern browsers from displaying audio without controls.
+audio:not([controls]) {
+  display: none;
+}
+
+// Base Settings.
+html {
+  font-size: 100%;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+
+// Focus states
+a: focus {
+}
+
+a:hover, a:active {
+  outline: 0;
+}
+
+// Prevent sup and sub from affecting line-height in all browsers.
+sup, sub {
+  position: relative;
+  font-size: 75%;
+  line-height: 0;
+  vertical-align: baseline;
+}
+sup {
+  top: -0.5em;
+}
+sub {
+  bottom: -0.25em;
+}
+
+// Images
+img {
+  max-width: 100%; // Responsive images. Use with caution.
+  vertical-align: middle;
+  border: 0;
+  border: 0;
+  -ms-interpolation-mode: bicubic;
+}
+
+// Prevent max-width from affecting Google Maps
+#map_canvas img {
+  max-width: none;
+}
+
+// Forms.
+// Font sizes and margins, for all browsers.
+button, input, select, textarea {
+  margin: 0;
+  font-size: 100%;
+  vertical-align: middle;
+}
+button, input {
+  *overflow: visible; // Inner spacing fix for IE6/IE7
+  line-height: normal; // FF3/4 have !important on line-height
+}
+// FF3/4 padding and border weirdness fix.
+button::-moz-focus-inner, input::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+button, input[type="button"], input[type="reset"], input[type="submit"] {
+  cursor: pointer; // cursors all the same.
+  -webkit-appearance: button; // Clickable, in iOS.
+}
+input[type="search"] {
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  -webkit-appearance: textfield;
+}
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button {
+  -webkit-appearance: none;
+}
+textarea {
+  overflow: auto;
+  vertical-align: top;
+}

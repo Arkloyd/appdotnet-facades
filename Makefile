@@ -1,4 +1,4 @@
-.PHONY: build clean purge help
+.PHONY: build clean purge help fullcss compressed cssdir css
 
 ALL_SCSS=$(shell find scss -name *.scss)
 ALL_CSS=$(ALL_SCSS:scss/%.scss=css/%.css)
@@ -18,7 +18,7 @@ help:
 	@echo '    make help  - this message'
 	@echo ''
 
-build: css
+build: compressed
 	@echo 'Built.'
 
 css/%.css: scss/%.scss

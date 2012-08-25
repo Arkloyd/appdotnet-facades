@@ -1,0 +1,201 @@
+/* Typography.scss
+ * Currently based heavily on Twitter Bootstrap and a few AListApart
+ * articles.
+ */
+
+p {
+  margin: 0 0 $baseLineHeight / 2;
+
+  small {
+    font-size: $baseFontSize - 2;
+  }
+}
+
+// Headings.
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  font-family: $headingsFontFamily;
+  font-weight: $headingsFontWeight;
+  color: $headingsColor;
+  text-rendering: optimizeLegibility;
+
+  small {
+    font-weight: normal;
+    color: $lightGray;
+  }
+}
+
+h1 {
+  font-size: 2.16em;
+  line-height: $baseLineHeight * 2;
+
+  small {
+    font-size: 1.5em;
+  }
+}
+
+h2 {
+  font-size: 2em;
+  line-height: $baseLineHeight * 2;
+
+  small {
+    font-size: 1.5em;
+  }
+}
+
+h3 {
+  font-size: 1.5em;
+  line-height: $baseLineHeight * 1.5;
+
+  small {
+    font-size: 1.25em; 
+  }
+}
+
+h4, h5, h6 {
+  line-height: $baseLineHeight;
+}
+
+h4 {
+  font-size: 1.2em;
+
+  small {
+    font-size: 1em;
+  }
+}
+
+h5 {
+  font-size: 1em;
+
+  small {
+    font-size: 1em;
+  }
+}
+
+h6 {
+  font-size: 0.9em;
+  text-transform: uppercase;
+}
+
+// Lists.
+ul, ol {
+  padding: 0;
+  margin: 0 0 $baseLineHeight / 2 25px;
+}
+
+ul ul,
+ul ol,
+ol ol,
+ol ul {
+  margin-bottom: 0;
+}
+
+ul {
+  list-style: disc;
+}
+
+ol {
+  list-style: decimal;
+}
+
+li {
+  line-height: $baseLineHeight;
+}
+
+ul.unstyled, ol.unstyled {
+  margin-left: 0;
+  list-style: none;
+}
+
+// Definition Lists
+dl {
+  margin-bottom: $baseLineHeight;
+}
+
+dt, dd {
+  line-height: $baseLineHeight;
+}
+
+dt {
+  font-weight: bold;
+  line-height: $baseLineHeight - 1;
+}
+
+dd {
+  margin-left: $baseLineHeight / 2;
+}
+
+// Definition lists for forms
+// TODO: fix widths to either percentages or ems or variables.
+.dl-horizontal {
+  dt {
+    float: left;
+    width: 120px;
+    clear: left;
+    text-align: right;
+  }
+
+  dd {
+    margin-left: 130px;
+  }
+}
+
+// Misc.
+hr {
+  margin: $baseLineHeight 0;
+  border: 0;
+  border-top: 1px solid $hrBorder;
+  border-bottom: 1px solid $white;
+}
+
+strong {
+  font-weight: bold;
+}
+
+em {
+  font-style: italic;
+}
+
+abbr[title] {
+  cursor: help;
+  border-bottom: 1px dotted $lightGray;
+}
+
+blockquote {
+  padding: 0 0 0 1.1em;
+  margin: 0 0 $baseLineHeight;
+  border-left: 5px solid $lighterGray;
+
+  p {
+    margin-bottom: 0;
+  }
+
+  small {
+    display: block;
+    line-height: $baseLineHeight;
+    color: $lightGray;
+    &:before {
+      content: '\2014 \00A0';
+    }
+  }
+}
+
+q:before, q:after,
+blockquote:before blockquote:after {
+  content: "";
+}
+
+address {
+  display: block;
+  margin-bottom: $baseLineHeight;
+  font-style: normal;
+  line-height: $baseLineHeight;
+}
+
+small {
+  font-size: 100%;
+}
+
+cite {
+  font-style: normal;
+}

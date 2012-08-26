@@ -1,15 +1,13 @@
-/* AppDotNet Facades
- *
- * with love, @sevvie
- */
-
+// AppDotNet Facades
+//
+// - with love, @sevvie
 @import "scss/reset";
 
 @import "scss/variables";
 
 @import "scss/mixins";
-@import "grids";
+@import "scss/grids";
 
-@import "typography";
-@import "forms";
-@import "tables";
+@import "scss/typography";
+@import "scss/forms";
+@import "scss/tables";

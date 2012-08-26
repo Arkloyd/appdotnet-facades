@@ -41,3 +41,4 @@ compressed:
 
 clean:
 	rm -fr css/
+	rm -f .sass-cache/

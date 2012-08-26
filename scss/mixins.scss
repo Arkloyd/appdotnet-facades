@@ -1,0 +1,180 @@
+// Mixins.scss
+// Adapted from Twitter-Bootstrap
+
+@import 'scss/variables';
+
+@mixin clearfix {
+  *zoom: 1;
+  &:before, &:after {
+    display: table;
+    content: "";
+  }
+
+  &:after {
+    clear: both;
+  }
+}
+
+@mixin tab-focus {
+  outline: thin dotted $lightGray;
+  // Webkit fix
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
+}
+
+@mixin center-block {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+// IE7 Fixes
+@mixin ie7-inline-block {
+  *display: inline;
+  *zoom: 1;
+}
+
+@mixin ie7-restore-left-whitespace {
+  *margin-left: .3em;
+
+  &:first-child {
+    *margin-left: 0;
+  }
+}
+
+@mixin ie7-restore-right-whitespace {
+  *margin-right: .3em;
+
+  &:last-child {
+    *margin-left: 0;
+  }
+}
+
+@mixin size($width, $height) {
+  width: $width;
+  height: $height;
+}
+
+@mixin square($s) {
+  @include size($s, $s);
+}
+
+@mixin placeholder($color: $placeholderColor) {
+  &:-moz-placeholder {
+    color: $color;
+  }
+
+  &:-ms-input-placeholder {
+    color: $color;
+  }
+
+  &::-webkit-input-placeholder {
+    color: $color;
+  }
+}
+
+@mixin text-overflow {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+@mixin hide-text {
+  font: 0/0 a;
+  color: transparent;
+  text-shadow: none;
+  background-color: transparent;
+  border: 0;
+}
+
+// CSS3 Properties
+@mixin border-radius($rad) {
+  -webkit-border-radius: $rad;
+  -moz-border-radius: $rad;
+  border-radius: $rad;
+}
+
+@mixin box-shadow($shadow) {
+  -webkit-box-shadow: $shadow;
+  -moz-box-shadow: $shadow;
+  box-shadow: $shadow;
+}
+
+/*
+@mixin transition($transition) {
+  -webkit-transition: $transition;
+  -moz-transition: $transition;
+  -ms-transition: $transition;
+  -o-transition: $transition:
+  transition: $transition;
+}
+
+@mixin rotate($deg) {
+  -webkit-transform: rotate($deg);
+  -moz-transform: rotate($deg);
+  -ms-transform: rotate($deg);
+  -o-transform: rotate($deg);
+  transform: rotate($deg);
+}
+*/
+
+// Resize Anything
+@mixin resizeable($dir) {
+  resize: $dir;
+  overflow: auto;
+}
+
+
+// Grid System.
+// Thank you, Twitter Bootstrap.
+@mixin container-fixed {
+  margin-right: auto;
+  margin-left: auto;
+  @include clearfix;
+}
+
+@mixin tableColumns($colspan: 1) {
+  float: none;
+  width: (($gridColumnWidth * $colspan) + ($gridGutterWidth * $colspan - 1)) - 16;
+  margin-left: 0;
+}
+
+// Make the Grid
+// Not exactly a LESS-style grid system. But generally the same.
+@mixin span-x-width($cols) {
+  width: ($gridColumnWidth * $cols) + ($gridGutterWidth * ($cols - 1));
+}
+
+@mixin offset-x-margin($cols) {
+  margin-left: ($gridColumnWidth * $cols) + ($gridGutterWidth * ($cols + 1));
+}
+
+@mixin fluid-span-x-width($cols) {
+  width: ($fluidColumnWidth * $cols) + ($fluidGutterWidth * ($cols - 1));
+}
+
+@mixin span-x($index) {
+  @for $x from 1 through $index {
+    .span-#{$x} {
+      @include span-x-width($x);
+    }
+  }
+}
+
+@mixin offset-x($index) {
+  @for $x from 1 through $index {
+    .span-#{$x} {
+      @include offset-x-margin($x);
+    }
+  }
+}
+
+@mixin fluid-span-x($index) {
+  @for $x from 1 through $index {
+    .span-#{$x} {
+      @include fluid-span-x-width($x);
+    }
+  }
+}
+
+

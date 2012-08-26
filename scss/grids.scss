@@ -1,0 +1,48 @@
+// Grids.scss
+// Originally adapted from Boostrap, but has gone through changes.
+
+@import 'scss/variables';
+@import 'scss/mixins';
+
+#grid {
+  .fixed {
+    .row {
+      margin-left: $gridGutterWidth * -1;
+      @include clearfix;
+    }
+
+    [class*="span"] {
+      float: left;
+      margin-left: $gridGutterWidth;
+    }
+
+    .container,
+    .navbar-fixed-top .container,
+    .navbar-fixed-bottom .container {
+       @include span-x-width($gridColumns);
+    }
+
+    @include span-x($gridColumns);
+    @include offset-x($gridColumns);
+  }
+
+  .fluid {
+    .row {
+      width: 100%;
+      @include clearfix;
+
+      [class*="span"] {
+        float: left;
+        margin-left: $fluidGutterWidth;
+        // IE7 fix
+        *margin-left: $fluidGutterWidth - (0.5 * $fluidRowWidth);
+      }
+
+      [class*="span"]:first-child {
+        margin-left: 0;
+      }
+
+      @include fluid-span-x($gridColumns);
+    }
+  }
+}

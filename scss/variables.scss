@@ -58,3 +58,14 @@ $inputBorderRadius: 3px;
 $inputDisabledBackground: $lighterGray;
 $formActionsBackground: #f5f5f5;
 
+$placeholderColor: $lightGray;
+$hrBorder: $lightGray;
+
+$gridColumns: 12;
+$gridColumnWidth: 60px;
+$gridGutterWidth: 20px;
+$gridRowWidth: ($gridColumns * $gridColumnWidth) + ($gridGutterWidth * ($gridColumns - 1));
+
+$fluidColumnWidth: 6.382978723%;
+$fluidGutterWidth: 2.127659574%;
+$fluidRowWidth: ($gridColumns * $fluidColumnWidth) + ($fluidGutterWidth * ($gridColumns - 1));

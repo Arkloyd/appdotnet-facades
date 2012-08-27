@@ -200,3 +200,53 @@ small {
 cite {
   font-style: normal;
 }
+
+// Code typography, for <code> and <pre>
+// From Twitter Bootstrap
+
+code, pre {
+  padding: 0 3px 2px;
+  font-family: $monoFontFamily;
+  font-size: $baseFontSize - 1;
+  color: $darkGray;
+  @include border-radius(3px);
+}
+
+code {
+  padding: 2px 4px;
+  color: #d14;
+  background-color: $lighterGray;
+  border: 1px dotted #e1e1e8;
+}
+
+pre {
+  display: block;
+  padding: ($baseLineHeight - 1) / 2;
+  margin: 0 0 $baseLineHeight / 2;
+  font-size: $baseFontSize * 0.925;
+  line-height: $baseLineHeight;
+  word-break: break-all;
+  word-wrap: break-word;
+  white-space: pre;
+  white-space: pre-wrap;
+  background-color: $lighterGray;
+  border: 1px solid #ccc;
+  border: 1px solid rgba(0,0,0,0.15);
+  .border-radius(4px);
+
+  &.prettyprint {
+    margin-bottom: $baseLineHeight;
+  }
+
+  code {
+    padding: 0;
+    color: inherit;
+    background-color: transparent;
+    border: 0;
+  }
+}
+
+.pre-scrollable {
+  max-height: 340px;
+  overflow-y: scroll;
+}

@@ -1,1 +1,153 @@
+// Forms.scss
+// From twitter bootstrap.
 
+@import 'scss/variables';
+@import 'scss/mixins';
+
+form {
+  margin: 0 0 $baseLineHeight;
+}
+
+fieldset {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+legend {
+  display: block;
+  width: 100%;
+  margin-bottom: $baseLineHeight * 1.5;
+  font-size: $baseFontSize * 1.5;
+  line-height: $baseLineHeight * 2;
+  color: $darkGray;
+  border: 0;
+  border-bottom: 1px solid $lighterGray;
+
+  small {
+    font-size: $baseLineHeight * 0.75;
+    color: $lightGray;
+  }
+}
+
+label, input, button, select, textarea {
+  font-size: $baseFontSize;
+  line-height: $baseLineHeight;
+  font-weight: normal;
+}
+
+input, button, select, textarea {
+  font-family: $baseFontFamily;
+}
+
+label {
+  display: block;
+  margin-bottom: 4px;
+}
+
+select, textarea,
+input[type="text"],
+input[type="password"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="date"],
+input[type="month"],
+input[type="time"],
+input[type="week"],
+input[type="number"],
+input[type="email"],
+input[type="url"],
+input[type="search"],
+input[type="tel"],
+input[type="color"],
+.uneditable-input {
+  display: inline-block;
+  height: $baseLineHeight;
+  padding: 4px;
+  margin-bottom: 9px;
+  font-size: $baseFontSize;
+  line-height: $baseLineHeight;
+  color: $gray;
+}
+
+input, textarea {
+  width: 210px;
+}
+
+textarea {
+  height: auto;
+}
+
+textarea,
+input[type="text"],
+input[type="password"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="date"],
+input[type="month"],
+input[type="time"],
+input[type="week"],
+input[type="number"],
+input[type="email"],
+input[type="url"],
+input[type="search"],
+input[type="tel"],
+input[type="color"],
+.uneditable-input {
+  background-color: $inputBackground;
+  border: 1px solid $inputBorder;
+  @include border-radius($inputBorderRadius);
+  @include box-shadow(inset 0 1px 1px rgba(0,0,0,0.075));
+  // No transitions, yet.
+
+  &:focus {
+    border-color: rgba(82,168,236,0.8);
+    outline: 0;
+    outline: thin dotted \9;
+    @include box-shadow(inset 0 1px 1px rgba(0,0,0,0.075));
+    @include box-shadow(0 0 8px rgba(82,168,236,0.6));
+  }
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+  margin: 3px 0;
+  *margin-top: 0;
+  line-height: normal;
+  cursor: pointer;
+}
+
+input[type="submit"],
+input[type="reset"],
+input[type="button"],
+input[type="radio"],
+input[type="checkbox"] {
+  width: auto;
+}
+
+.uneditable-textarea {
+  width: auto;
+  height: auto;
+}
+
+select, input[type="file"] {
+  height: 28px;
+  *margin-top: 4px;
+  line-height: 28px;
+}
+
+select {
+  width: 220px;
+  border: 1px solid #bbb;
+}
+
+select[multiple], select[size] {
+  height: auto;
+}
+
+select:focus,
+input[type="file"]:focus,
+input[type="radio"]:focus,
+input[type="checkbox"]:focus {
+  @include tab-focus;
+}

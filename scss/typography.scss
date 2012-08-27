@@ -3,6 +3,7 @@
  * articles.
  */
 @import 'scss/variables';
+@import 'scss/mixins';
 
 p {
   margin: 0 0 $baseLineHeight / 2;
@@ -232,7 +233,7 @@ pre {
   background-color: $lighterGray;
   border: 1px solid #ccc;
   border: 1px solid rgba(0,0,0,0.15);
-  .border-radius(4px);
+  @include border-radius(4px);
 
   &.prettyprint {
     margin-bottom: $baseLineHeight;

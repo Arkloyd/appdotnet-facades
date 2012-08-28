@@ -1,0 +1,65 @@
+// Generics.scss
+// Pretty much all mine. -7
+
+@import 'scss/variables';
+@import 'scss/mixins';
+
+// Navigation bar.
+.navbar-container {
+  margin-left: $fluidGutterWidth;
+  margin-right: $fluidGutterWidth;
+  width: auto;
+
+  .navbar {
+    height: 2.5em;
+
+    nav {
+      display: inline-block;
+      margin-bottom: 0;
+
+      ul.nav {
+        margin-bottom: 0;
+        margin-left: 0;
+
+        li {
+          display: inline;
+          list-style: none;
+          line-height: 2.5em;
+          margin-left: 1em;
+          margin-right: 1em;
+        }
+      }
+    }
+
+    .navbar-form {
+      margin-bottom: 0;
+      @include clearfix;
+    }
+  }
+}
+
+header {
+  margin-left: $fluidGutterWidth;
+  margin-right: $fluidGutterWidth;
+  width: auto;
+
+  #branding-medium {
+    height: 4em;
+
+  }
+}
+
+footer {
+  background: $black;
+  color: $lighterGray;
+
+  padding-left: $fluidGutterWidth;
+  padding-right: $fluidGutterWidth;
+  width: auto;
+
+  .copy {
+    text-align: center;
+    font-size: 0.925em;
+    line-height: 2 * $baseLineHeight;
+  }
+}

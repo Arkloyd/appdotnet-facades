@@ -29,3 +29,9 @@ a:hover {
 @import "scss/typography";
 @import "scss/forms";
 @import "scss/tables";
+
+// Generic components
+@import "scss/generics";
+
+// Utilities. At the end so they aren't overridden by the previous.
+@import "scss/utils"

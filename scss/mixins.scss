@@ -161,7 +161,7 @@
 
 @mixin offset-x($index) {
   @for $x from 1 through $index {
-    .span-#{$x} {
+    .offset-#{$x} {
       @include offset-x-margin($x);
     }
   }

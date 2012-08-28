@@ -4,7 +4,13 @@
 @import 'scss/variables';
 @import 'scss/mixins';
 
-#grid {
+.container {
+  width: $gridRowWidth + $gridGutterWidth;
+  margin-left: auto;
+  margin-right: auto;
+  @include clearfix;
+}
+.grid {
   .fixed {
     .row {
       margin-left: $gridGutterWidth * -1;

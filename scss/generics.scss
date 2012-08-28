@@ -1,0 +1,131 @@
+// Generics.scss
+// Pretty much all mine. -7
+
+@import 'scss/variables';
+@import 'scss/mixins';
+
+// Navigation bar.
+.navbar-container {
+  padding-left: $fluidGutterWidth;
+  padding-right: $fluidGutterWidth;
+  width: auto;
+
+  .navbar {
+    height: 2.5em;
+
+    nav {
+      margin-bottom: 0;
+      display: inline-block;
+
+      ul.nav {
+        margin-bottom: 0;
+        margin-left: 0;
+
+        li {
+          display: inline;
+          list-style: none;
+          line-height: 2.5em;
+          margin-left: 1em;
+          margin-right: 1em;
+        }
+      }
+    }
+
+    .navbar-form {
+      display: inline-block;
+      margin-bottom: 0;
+      @include clearfix;
+
+      input, select {
+        display: inline-block;
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+header {
+  padding-left: $fluidGutterWidth;
+  padding-right: $fluidGutterWidth;
+  width: auto;
+
+  #branding-medium {
+    height: 5em;
+    border-bottom: 1px solid rgba(0,0,0,0.15);
+
+    h1 {
+      padding-top: 1em;
+    }
+
+  }
+}
+
+.container {
+  margin-top: $baseLineHeight;
+}
+
+[role="main"] {
+  article {
+    padding-bottom: $baseLineHeight;
+    hgroup {
+      h1 {
+        line-height: $baseLineHeight * 2.5;
+        vertical-align: bottom;
+        color: $darkGray;
+        border-bottom: 1px solid rgba(0,0,0,0.075);
+      }
+
+      .byline {
+        .datetime, .author {
+          display: inline-block;
+          margin-left: 1em;
+          margin-right: 1em;
+        }
+      }
+    }
+
+    p {
+  
+    }
+
+    .metadata {
+      text-align: right;
+    }
+  }
+}
+
+.sidebar-container {
+  background-color: $lighterGray;
+
+  .sidebar {
+    margin-left: 2em;
+
+    ul {
+      margin-top: 0.5em;
+      margin-left: 0;
+
+      li {
+        list-style: none;
+        margin-left: 0;
+        width: auto;
+        border-bottom: 1px solid rgba(0,0,0,0.15);
+      }
+    }
+  }
+}
+
+footer {
+  background: $black;
+  color: $lighterGray;
+
+  margin-top: 2 * $baseLineHeight;
+  padding-left: $fluidGutterWidth;
+  padding-right: $fluidGutterWidth;
+  width: auto;
+
+  .copy {
+    text-align: center;
+    font-size: 0.925em;
+    line-height: 1.5 * $baseLineHeight;
+  }
+}

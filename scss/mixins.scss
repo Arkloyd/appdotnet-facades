@@ -100,23 +100,21 @@
   box-shadow: $shadow;
 }
 
-/*
-@mixin transition($transition) {
-  -webkit-transition: $transition;
-  -moz-transition: $transition;
-  -ms-transition: $transition;
-  -o-transition: $transition:
-  transition: $transition;
-}
-
-@mixin rotate($deg) {
-  -webkit-transform: rotate($deg);
-  -moz-transform: rotate($deg);
-  -ms-transform: rotate($deg);
-  -o-transform: rotate($deg);
-  transform: rotate($deg);
-}
-*/
+//@mixin transition($transition) {
+//  -webkit-transition: $transition;
+//  -moz-transition: $transition;
+//  -ms-transition: $transition;
+//  -o-transition: $transition:
+//  transition: $transition;
+//}
+//
+//@mixin rotate($deg) {
+//  -webkit-transform: rotate($deg);
+//  -moz-transform: rotate($deg);
+//  -ms-transform: rotate($deg);
+//  -o-transform: rotate($deg);
+//  transform: rotate($deg);
+//}
 
 // Resize Anything
 @mixin resizeable($dir) {
@@ -163,7 +161,7 @@
 
 @mixin offset-x($index) {
   @for $x from 1 through $index {
-    .span-#{$x} {
+    .offset-#{$x} {
       @include offset-x-margin($x);
     }
   }

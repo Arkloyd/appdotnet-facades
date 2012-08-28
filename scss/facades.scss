@@ -1,15 +1,37 @@
-/* AppDotNet Facades
- *
- * with love, @sevvie
- */
-
+// AppDotNet Facades
+//
+// - with love, @sevvie
 @import "scss/reset";
-
 @import "scss/variables";
-
 @import "scss/mixins";
-@import "grids";
 
-@import "typography";
-@import "forms";
-@import "tables";
+body {
+  margin: 0;
+  font-family: $baseFontFamily;
+  font-size: $baseFontSize;
+  line-height: $baseLineHeight;
+  color: $textColor;
+  background-color: $bodyBackground;
+}
+
+a {
+  color: $linkColor;
+  text-decoration: none;
+}
+
+a:hover {
+  color: $linkColorHover;
+  text-decoration: underline;
+}
+
+@import "scss/grids";
+@import "scss/sprites";
+@import "scss/typography";
+@import "scss/forms";
+@import "scss/tables";
+
+// Generic components
+@import "scss/generics";
+
+// Utilities. At the end so they aren't overridden by the previous.
+@import "scss/utils"

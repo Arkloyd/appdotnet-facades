@@ -6,8 +6,8 @@
 
 // Navigation bar.
 .navbar-container {
-  margin-left: $fluidGutterWidth;
-  margin-right: $fluidGutterWidth;
+  padding-left: $fluidGutterWidth;
+  padding-right: $fluidGutterWidth;
   width: auto;
 
   .navbar {
@@ -39,13 +39,72 @@
 }
 
 header {
-  margin-left: $fluidGutterWidth;
-  margin-right: $fluidGutterWidth;
+  padding-left: $fluidGutterWidth;
+  padding-right: $fluidGutterWidth;
   width: auto;
 
   #branding-medium {
-    height: 4em;
+    height: 5em;
+    border-bottom: 1px solid rgba(0,0,0,0.15);
 
+    h1 {
+      padding-top: 1em;
+    }
+
+  }
+}
+
+.container {
+  margin-top: $baseLineHeight;
+}
+
+[role="main"] {
+  article {
+    padding-bottom: $baseLineHeight;
+    hgroup {
+      h1 {
+        line-height: $baseLineHeight * 2.5;
+        vertical-align: bottom;
+        color: $darkGray;
+        border-bottom: 1px solid rgba(0,0,0,0.075);
+      }
+
+      .byline {
+        .datetime, .author {
+          display: inline-block;
+          margin-left: 1em;
+          margin-right: 1em;
+        }
+      }
+    }
+
+    p {
+  
+    }
+
+    .metadata {
+      text-align: right;
+    }
+  }
+}
+
+.sidebar-container {
+  background-color: $lighterGray;
+
+  .sidebar {
+    margin-left: 2em;
+
+    ul {
+      margin-top: 0.5em;
+      margin-left: 0;
+
+      li {
+        list-style: none;
+        margin-left: 0;
+        width: auto;
+        border-bottom: 1px solid rgba(0,0,0,0.15);
+      }
+    }
   }
 }
 
@@ -53,6 +112,7 @@ footer {
   background: $black;
   color: $lighterGray;
 
+  margin-top: 2 * $baseLineHeight;
   padding-left: $fluidGutterWidth;
   padding-right: $fluidGutterWidth;
   width: auto;
@@ -60,6 +120,6 @@ footer {
   .copy {
     text-align: center;
     font-size: 0.925em;
-    line-height: 2 * $baseLineHeight;
+    line-height: 1.5 * $baseLineHeight;
   }
 }
